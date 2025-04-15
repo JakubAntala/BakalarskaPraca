@@ -1,0 +1,14 @@
+guest
+
+guest@gmail.com
+123
+------------------------
+staff
+
+staff@gmail.com
+123
+------------------
+admin
+
+admin@gmail.com
+123
