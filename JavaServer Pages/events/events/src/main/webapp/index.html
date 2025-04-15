@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Prihlásenie</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <style>
+        body {
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .login-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            border: none;
+        }
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h3 class="text-center mb-4">Prihlásenie</h3>
+    <form action="mainServlet" method="post">
+        <div class="mb-3">
+            <label for="login" class="form-label">Login</label>
+            <input type="text" class="form-control" id="login" name="login" required>
+        </div>
+        <div class="mb-3">
+            <label for="pwd" class="form-label">Heslo</label>
+            <input type="password" class="form-control" id="pwd" name="pwd" required>
+        </div>
+        <input type="hidden" name="operacia" value="login">
+        <button type="submit" class="btn btn-custom w-100">Prihlásiť</button>
+    </form>
+
+    <hr>
+
+    <div class="text-center">
+        <p>Nemáte účet?</p>
+        <form action="registraciaServlet" method="post">
+            <input type="hidden" name="operacia" value="register">
+            <button type="submit" class="btn btn-outline-success w-100">Registrovať</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
